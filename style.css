@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    background: #333;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* set to relative becuase we will be able to position items absolutly inside */
+.slider{
+    position: relative; 
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* slide to overlay entire container with 0 opacity*/
+.slide{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+}
+
+/* only slide visable */
+.slide.current{
+    opacity: 1;
+}
+
+.slide .content{
+    position: absolute;
+    bottom: 70px;
+    left: -600px;
+    width: 600px;
+    background: rgba(255,255,255,.6);
+    color: #333;
+    opacity: 0;
+    padding: 2em;
+}
+
+.slide .content h1{
+    margin-bottom: .5em;
+}
+
+/* makes the slide content visable */
+.slide.current .content{
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all .7s ease-in-out .3s;
+}
+
+.buttons button#next{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
+
+.buttons button#prev{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+
+.buttons button{
+    border: 2px solid white;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.buttons button:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+.slide:first-child{
+    background: url(./images/wedding1.jpg) no-repeat center center/cover; 
+}
+.slide:nth-child(2){
+    background: url(./images/wedding2.jpg) no-repeat center center/cover; 
+}
+.slide:nth-child(3){
+    background: url(./images/wedding3.jpg) no-repeat center center/cover; 
+}
+.slide:nth-child(4){
+    background: url(./images/wedding4.jpg) no-repeat center center/cover; 
+}
+.slide:nth-child(5){
+    background: url(./images/wedding5.jpg) no-repeat center center/cover; 
+}
