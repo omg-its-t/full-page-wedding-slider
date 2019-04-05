@@ -1,4 +1,4 @@
-const slide = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
 const auto = false;
@@ -13,7 +13,7 @@ function nextSlide(){
 
     //check for next slide
     if(current.nextElementSibling){
-        //if yes add to next sibling
+        //if yes add class to next sibling
         current.nextElementSibling.classList.add('current');
     }
     else{
@@ -31,7 +31,7 @@ function prevSlide(){
 
     //check for previous slide
     if(current.previousElementSibling){
-        //if yes add to previous sibling
+        //if yes add class to previous sibling
         current.previousElementSibling.classList.add('current');
     }
     else{
