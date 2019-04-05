@@ -1,0 +1,156 @@
+/* targeting checked state of menu and styling it */
+
+:root {
+    --menu-speed: 0.85s;
+  }
+
+.menu-wrap{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.menu-wrap .toggler{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+}
+
+.hamburger{
+    border-radius: 5px;
+}
+
+.menu-wrap .hamburger{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* burger lines */
+
+/* center line */
+.menu-wrap .hamburger > div{
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s ease-in-out;
+}
+
+/* top and bottom lines */
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+/* changing only bottom line position to be down 10 from the center */
+.menu-wrap .hamburger > div:after{
+    top: 10px;
+}
+
+/* toggler animate */
+/* when the toggler is checked, we want to target the div that immediately follows .hamburger */
+
+.menu-wrap .toggler:checked + .hamburger > div{
+    transform: rotate(135deg);
+}
+
+/* turn lines to X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after{
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* rotate on hover when in checked state */
+.menu-wrap .toggler:checked:hover + .hamburger > div{
+    transform: rotate(225deg);
+}
+
+/* show menu */
+.menu-wrap .toggler:checked ~.menu{
+    visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~.menu > div{
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~.menu > div > div{
+    opacity: 1;
+    transition: .4s ease-in-out;
+}
+
+/* link styles */
+/* same as top menu, it covers the whole page */
+.menu-wrap .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* visibility: hidden; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+/* style first div within menu class */
+.menu-wrap .menu > div{
+    background: rgba(0,0,0,.5);
+    border-radius: 5px;
+    width: 200vw;
+    height: 200vh;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0); 
+    transition: all .4s ease-in-out;
+}
+
+.menu-wrap .menu > div > div{
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;  
+    transition: opacity .4s ease-in-out;
+}
+
+.menu-wrap .menu > div > div > ul > li{
+    list-style-type: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a{
+    color: #fff;
+    text-decoration: none;
+    transition: color .4s ease-in-out;
+}
