@@ -1,0 +1,11 @@
+section{
+    height: 100vh;
+}
+
+section:nth-child(odd){
+    background: slategray;
+}
+
+section#ceremony{
+    background: url(../images/section-background.jpg) no-repeat fixed center; 
+}

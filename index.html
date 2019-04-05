@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="style/main.css">
         <link rel="stylesheet" href="style/menu.css">
+        <link rel="stylesheet" href="style/content.css">
     </head>
     <body>
 
@@ -22,7 +23,7 @@
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About</a></li>
-                            <li><a href="#">Ceremony</a></li>
+                            <li><a data-scroll href="#ceremony">Ceremony</a></li>
                             <li><a href="#">Venue</a></li>
                         </ul>
                     </div>
@@ -82,5 +83,7 @@
         </div>
 
         <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+        <script>var scroll = new SmoothScroll('a[href*="#"]');</script>
     </body>
 </html>
