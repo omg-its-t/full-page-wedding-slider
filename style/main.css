@@ -63,12 +63,14 @@ body{
     position: absolute;
     top: 50%;
     right: 15px;
+    z-index: 99;
 }
 
 .buttons button#prev{
     position: absolute;
     top: 50%;
     left: 15px;
+    z-index: 99;
 }
 
 .buttons button{
