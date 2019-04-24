@@ -10,10 +10,9 @@
         <link rel="stylesheet" href="style/image-grid.css">
         <link rel="stylesheet" href="style/menu.css">
         <link rel="stylesheet" href="style/main.css">
-
+        <link rel="stylesheet" href="style/form-style.css">
     </head>
     <body>
-
         <div class="menu-wrap">
             <input type="checkbox" class="toggler">
             <div class="hamburger">
@@ -27,12 +26,13 @@
                             <li><a data-scroll href="#about">About</a></li>
                             <li><a data-scroll href="#ceremony">Ceremony</a></li>
                             <li><a data-scroll href="#images">Images</a></li>
+                            <li><a data-scroll href="#advice">Give Advice</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    <header></header>
+    <header>
         <div class="slider">
             <div class="slide current">
                 <div class="content">
@@ -70,19 +70,19 @@
             <button id="prev"><i class="fas fa-arrow-left"></i></button>
             <button id="next"><i class="fas fa-arrow-right"></i></button>
         </div>
-
     </header>
+
         <section id="about">
             <div class="about-couple">
                 <div class="bride-about">
-                    <img src="images/bride.jpg" alt="bride face">
                     <h2>Bride Name</h2>
+                    <img src="images/bride.jpg" alt="bride face">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, dolor similique explicabo, distinctio nostrum unde sunt, impedit excepturi eligendi dolorum neque voluptatibus repudiandae pariatur maxime culpa eveniet nam expedita? Delectus!</p>
                 </div>
                 <i class="fas fa-heart"></i>
                 <div class="groom-about">
-                    <img src="images/groom.jpg" alt="groom face">
                     <h2>Groom Name</h2>
+                    <img src="images/groom.jpg" alt="groom face">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, dolor similique explicabo, distinctio nostrum unde sunt, impedit excepturi eligendi dolorum neque voluptatibus repudiandae pariatur maxime culpa eveniet nam expedita? Delectus!</p>
                 </div>
             </div>
@@ -104,7 +104,7 @@
 					<figure class="singlePhoto"><img src="images/wedding2.jpg" alt="image example 2"></figure>
 				</li>
 				<li>
-					<figure class="singlePhoto"><img src="images/wedding3.jpg" alt="image example 3"></figure>
+					<figure class="singlePhoto"><img src="images/wedding5.jpg" alt="image example 3"></figure>
 				</li>
 				<li>
 					<figure class="singlePhoto"><img src="images/wedding4.jpg" alt="image example 4"></figure>
@@ -121,10 +121,26 @@
 					<figure class="singlePhoto"><img src="images/wedding2.jpg" alt="image example 7"></figure>
 				</li>
 				<li>
-					<figure class="singlePhoto"><img src="images/wedding3.jpg" alt="image example 8"></figure>
+					<figure class="singlePhoto"><img src="images/wedding5.jpg" alt="image example 8"></figure>
 				</li>
 			</ul>
-		</section>
+        </section>
+        
+        <section id="advice">
+            <h2>Advice for the couple</h2>
+                <form action="/action_page.php" class="advice-form">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="First Name">
+                        
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Last Name">
+                        
+                    <label for="subject">What would you like to say?</label>
+                    <input type="text" id="advice-text" name="advice-text" placeholder="Advice...">
+                        
+                    <input type="submit" value="Send" class="btn">
+                </form>
+        </section>
 
         <script src="main.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>

@@ -114,14 +114,15 @@ section#ceremony .script-text{
     transform-origin: center center;
 }
 
-.about-couple h2{
+.about-couple h2,
+#advice h2{
     text-align: center;
     padding: 1em;
     font-size: 2em;
 }
 
 .about-couple p{
-    padding: .5em;
+    padding: 3em;
     text-align: center;
 }
 
