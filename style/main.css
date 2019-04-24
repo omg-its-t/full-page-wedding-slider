@@ -11,6 +11,7 @@ body{
     background: #333;
     color: #fff;
     line-height: 1.6;
+    overflow-x: hidden; /* removes extra margin on the right of the page from the sections */
 }
 
 /* set to relative becuase we will be able to position items absolutly inside */
@@ -108,7 +109,8 @@ section#ceremony .script-text{
 }
 
 .script-text{
-    transform: rotate(2deg);
+    transform: translate(-10px); /* TODO make work with these other 2 properties */
+    transform: rotate(2deg); 
     transform-origin: center center;
 }
 
