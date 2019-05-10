@@ -158,12 +158,14 @@ section#ceremony .script-text{
     font-size: 2em;
 }
 
+
 @media(min-width: 800px){
     .about-couple{
         display: flex;
         justify-content: space-around;
     }
 }
+
 
 
 /* 600px or less do this stuff*/
@@ -179,6 +181,7 @@ section#ceremony .script-text{
     .slide.current .content{
         transform: translateY(-300px);
     }
+
 }
 
 .slide:first-child{

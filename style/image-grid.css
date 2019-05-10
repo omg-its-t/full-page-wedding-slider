@@ -29,3 +29,9 @@
 	transform: scale(1.3);
 	opacity: 1;
 }
+
+@media(max-width :600px){
+	.images li{
+		width: 50%;
+	}
+}
